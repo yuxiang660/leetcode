@@ -32,6 +32,7 @@
 ### Divide-and-Conquer
 
 ### Dynamic Programming
+- [120. Triangle](120.Triangle.md)
 
 ### Backtracking
 
