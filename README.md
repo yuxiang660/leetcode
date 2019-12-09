@@ -6,6 +6,8 @@ Every leetcode problem is illustrated by one *.md* file. The structure of every 
 
 >## Promblem (link to leetcode)
 >Simple description of the algorithm problems.
+>## Difficulty
+>✳
 >## Solution
 >The main algorithm for this problem.<br>
 >`C++ Code`
