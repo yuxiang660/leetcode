@@ -5,7 +5,7 @@ This project records the ideas of solving the algorithm leetcode problems.
 Every leetcode problem is illustrated by one *.md* file. The structure of every *.md* file is:
 
 >## Promblem
->Simple description of the algorithm problems.
+>Simple description of the leetcode problems.
 >## Difficulty
 >Simple: ✳<br>
 >Medium: ✳✳<br>
