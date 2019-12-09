@@ -1,5 +1,5 @@
 # Leetcode Learning Trip
-This project records the ideas of solving the algorithm leetcode problems.
+This project records the ideas of solving the leetcode problems.
 
 ## [Contents](Contents.md)
 Every leetcode problem is illustrated by one *.md* file. The structure of every *.md* file is:
