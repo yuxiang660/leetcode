@@ -7,7 +7,9 @@ Every leetcode problem is illustrated by one *.md* file. The structure of every 
 >## Promblem (link to leetcode)
 >Simple description of the algorithm problems.
 >## Difficulty
->✳
+>Simple: ✳<br>
+>Medium: ✳✳<br>
+>Hard: ✳✳✳<br>
 >## Solution
 >The main algorithm for this problem.<br>
 >`C++ Code`
