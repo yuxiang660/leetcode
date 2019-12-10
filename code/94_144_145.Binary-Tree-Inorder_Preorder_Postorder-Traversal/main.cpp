@@ -29,7 +29,25 @@ std::vector<int> travelInorder(TreeNode* root)
 
 std::vector<int> travelPreorder(TreeNode* root)
 {
-   return {};
+   std::vector<int> preorderNodes;
+   std::stack<TreeNode*> nodeStack;
+
+   while (root != nullptr || !nodeStack.empty())
+   {
+      if (root != nullptr)
+      {
+         preorderNodes.push_back(root->val);
+         nodeStack.push(root);
+         root = root->left;
+      }
+      else
+      {
+         root = nodeStack.top()->right;
+         nodeStack.pop();
+      }
+   }
+
+   return preorderNodes;
 }
 
 std::vector<int> travelPostorder(TreeNode* root)

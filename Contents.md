@@ -12,6 +12,7 @@
 ## Non-linear Structure
 ### Binary Tree
 - [94. Binary Tree Inorder Traversal](94.Binary-Tree-Inorder-Traversal.md)
+- [144. Binary Tree Preorder Traversal](144.Binary-Tree-Preorder-Traversal.md)
 
 #### Heap
 
