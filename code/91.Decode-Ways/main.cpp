@@ -2,18 +2,24 @@
 #include <string>
 #include <vector>
 
-bool decodeWithLastCharacter(const std::string& encode, size_t i)
+bool decode(const char num)
 {
-   if (encode[i - 1] == '0') return false;
-
-   int number = std::stoi(std::string(encode.begin() + i - 1, encode.begin() + i + 1));
-
-   return (number >= 1) && (number <= 26);
+   return (num != '0');
 }
 
-bool decodeCurrentCharacter(const std::string& encode, size_t i)
+bool decodeWithLastNum(const char lastNum, const char num)
 {
-   return (encode[i] != '0');
+   switch (lastNum)
+   {
+   case '1':
+      return true;
+   case '2':
+      if (num <= '6') return true;
+   default:
+      break;
+   }
+
+   return false;
 }
 
 int numDecodings(const std::string& encode)
@@ -24,16 +30,16 @@ int numDecodings(const std::string& encode)
    {
       if (i == 0)
       {
-         decodeValues[i] = decodeCurrentCharacter(encode, i);
+         decodeValues[0] = decode(encode[0]);
       }
       else if (i == 1)
       {
-         decodeValues[i] = (decodeCurrentCharacter(encode, i) ? decodeValues[i - 1] : 0) + decodeWithLastCharacter(encode, i);
+         decodeValues[1] = (decode(encode[1]) ? decodeValues[i - 1] : 0) + decodeWithLastNum(encode[0], encode[1]);
       }
       else
       {
-         decodeValues[i] = (decodeCurrentCharacter(encode, i) ? decodeValues[i - 1] : 0) +
-                           (decodeWithLastCharacter(encode, i) ? decodeValues[i - 2] : 0);
+         decodeValues[i] = (decode(encode[i]) ? decodeValues[i - 1] : 0) +
+                           (decodeWithLastNum(encode[i - 1], encode[i]) ? decodeValues[i - 2] : 0);
       }
    }
 
