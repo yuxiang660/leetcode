@@ -38,6 +38,7 @@
 ### Dynamic Programming
 - [91. Decode Ways](91.Decode-Ways.md)
 - [120. Triangle](120.Triangle.md)
+- [639. Decode Ways II](639.Decode-Ways-II.md)
 
 ### Backtracking
 
