@@ -52,7 +52,34 @@ std::vector<int> travelPreorder(TreeNode* root)
 
 std::vector<int> travelPostorder(TreeNode* root)
 {
-   return {};
+   std::vector<int> postorderNodes;
+   std::stack<TreeNode*> nodeStack;
+   TreeNode* lastPopNode = nullptr;
+
+   while (root != nullptr || !nodeStack.empty())
+   {
+      if (root != nullptr)
+      {
+         nodeStack.push(root);
+         root = root->left;
+      }
+      else
+      {
+         auto topNode = nodeStack.top();
+         if (topNode->right == nullptr || topNode->right == lastPopNode)
+         {
+            postorderNodes.push_back(topNode->val);
+            nodeStack.pop();
+            lastPopNode = topNode;
+         }
+         else
+         {
+            root = topNode->right;
+         }
+      }
+   }
+
+   return postorderNodes;
 }
 
 
@@ -67,7 +94,7 @@ void print(const std::vector<int> numbers)
 
 int main()
 {
-   BinaryTree tree({ 1, 2, 3, boost::none, 5, 6, 7 });
+   BinaryTree tree({ 1, 2, 3, boost::none, boost::none, 4, 5 });
    tree.print();
 
    std::cout << "Travel Inorder: ";
