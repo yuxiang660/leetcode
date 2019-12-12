@@ -1,0 +1,45 @@
+digraph G {
+
+  subgraph cluster_0 {
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+    node1 -> node1_1 -> node1_1_1 -> node1_1_1_1;
+    label = "sentence #1";
+  }
+
+  subgraph cluster_1 {
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+    node1 -> node1_2 -> node1_2_1;
+    label = "sentence #2";
+  }
+  
+  subgraph cluster_2 {
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+    node2 -> node2_1 -> node2_1_1;
+    label = "sentence #3";
+  }
+  
+  node1 [label="pine"];
+  
+  node1_1 [label="apple"];
+  node1_1_1 [label="pen"];
+  node1_1_1_1 [label="apple"];
+  
+  node1_2 [label="applepen"];
+  node1_2_1 [label="apple"];
+  
+  node2 [label="pineapple"];
+  node2_1 [label="pen"];
+  node2_1_1 [label="apple"];
+  
+    
+  start -> node1;
+  start -> node2;
+
+  start [shape=Mdiamond];
+}
