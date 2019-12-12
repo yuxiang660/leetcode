@@ -10,9 +10,14 @@
 ### Linked List
 
 ## Non-linear Structure
+### Tree
+#### DFS
+- [140. Word Break II](140.Word-Break-II.md)
+
+#### BFS
+
 ### Binary Tree
 - [94. Binary Tree Inorder Traversal](94.Binary-Tree-Inorder-Traversal.md)
-- [139. Word Break](139.Word-Break.md)
 - [144. Binary Tree Preorder Traversal](144.Binary-Tree-Preorder-Traversal.md)
 - [145. Binary Tree Postorder Traversal](145.Binary-Tree-Postorder-Traversal.md)
 
@@ -38,6 +43,8 @@
 
 ### Dynamic Programming
 - [91. Decode Ways](91.Decode-Ways.md)
+- [139. Word Break](139.Word-Break.md)
+- [140. Word Break II](140.Word-Break-II.md)
 - [120. Triangle](120.Triangle.md)
 - [639. Decode Ways II](639.Decode-Ways-II.md)
 
