@@ -1,15 +1,10 @@
 #include "DpSolution.h"
 
-DpSolution::DpSolution(const std::string& words, const std::vector<std::string>& wordDict):
-   words(words),
-   wordDict(wordDict)
-{
-}
-
 std::vector<size_t> DpSolution::getTailPositions
 (
    const std::string::const_iterator begin,
-   const std::string::const_iterator end
+   const std::string::const_iterator end,
+   const std::vector<std::string>& wordDict
 )
 {
    std::vector<size_t> tailPositions;
@@ -32,7 +27,7 @@ std::vector<size_t> DpSolution::getTailPositions
    return tailPositions;
 }
 
-std::vector<std::string> DpSolution::wordBreak()
+std::vector<std::string> DpSolution::wordBreak(const std::string& words, const std::vector<std::string>& wordDict)
 {
    // @TODO: To make the algorithm more efficient, check whether the string can be broken correctly
    // in advance using "139. Word Break" way.
@@ -46,7 +41,7 @@ std::vector<std::string> DpSolution::wordBreak()
 
    for (size_t i = 0; i < words.size(); i++)
    {
-      const auto tailPositions = getTailPositions(words.begin(), words.begin() + i + 1);
+      const auto tailPositions = getTailPositions(words.begin(), words.begin() + i + 1, wordDict);
 
       for (const auto& tailPosition : tailPositions)
       {

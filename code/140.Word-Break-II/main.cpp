@@ -8,17 +8,17 @@ int main()
 
    const std::string words{ "pineapplepenapple" };
    const std::vector<std::string> wordDict{ "apple", "pen", "applepen", "pine", "pineapple" };
-   
+
    std::cout << "\nDpSolution:\n";
-   DpSolution dpSolution(words, wordDict);
-   for (const auto& sentence : dpSolution.wordBreak())
+   DpSolution dpSolution;
+   for (const auto& sentence : dpSolution.wordBreak(words, wordDict))
    {
       std::cout << sentence << std::endl;
    }
 
    std::cout << "\nDfsSolution:\n";
-   DfsSolution dfsSolution(words, wordDict);
-   for (const auto& sentence : dfsSolution.wordBreak())
+   DfsSolution dfsSolution;
+   for (const auto& sentence : dfsSolution.wordBreak(words, wordDict))
    {
       std::cout << sentence << std::endl;
    }

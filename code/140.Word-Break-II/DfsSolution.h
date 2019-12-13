@@ -7,15 +7,13 @@
 class DfsSolution
 {
 public:
-   DfsSolution(const std::string& words, const std::vector<std::string>& wordDict);
+   DfsSolution() {}
 
-   std::vector<std::string> wordBreak();
-
-private:
-   std::vector<std::string> getPossibleSentences(const std::string& subWords);
+   std::vector<std::string> wordBreak(const std::string& words, const std::vector<std::string>& wordDict);
 
 private:
-   const std::string words;
-   const std::vector<std::string> wordDict;
+   std::vector<std::string> getPossibleSentences(const std::string& subWords, const std::vector<std::string>& wordDict);
+
+private:
    std::unordered_map<std::string, std::vector<std::string>> sentencesMap;
 };
