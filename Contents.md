@@ -48,6 +48,7 @@
 - [139. Word Break](139.Word-Break.md)
 - [140. Word Break II](140.Word-Break-II.md)
 - [120. Triangle](120.Triangle.md)
+- [121. Best Time to Buy and Sell Stock](121.Best-Time-to-Buy-and-Sell-Stock.md)
 - [639. Decode Ways II](639.Decode-Ways-II.md)
 
 ### Backtracking
