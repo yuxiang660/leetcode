@@ -10,6 +10,7 @@ Every leetcode problem is illustrated by one *.md* file. The structure of every 
 >Simple: ✳<br>
 >Medium: ✳✳<br>
 >Hard: ✳✳✳<br>
+>Very Hard: ✳✳✳✳<br>
 >## Solution
 >The main algorithm for this problem.<br>
 >`C++ Code`
