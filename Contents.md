@@ -53,6 +53,7 @@
 - [123. Best Time to Buy and Sell Stock III](123.Best-Time-to-Buy-and-Sell-Stock-III.md)
 - [188. Best Time to Buy and Sell Stock IV](188.Best-Time-to-Buy-and-Sell-Stock-IV.md)
 - [309. Best Time to Buy and Sell Stock with Cooldown](309.Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.md)
+- [516. Longest Palindromic Subsequence](516.Longest-Palindromic-Subsequence.md)
 - [639. Decode Ways II](639.Decode-Ways-II.md)
 
 ### Backtracking
@@ -93,3 +94,4 @@
 
 ### Palindrome
 - [125. Valid Palindrome](125.Valid-Palindrome.md)
+- [516. Longest Palindromic Subsequence](516.Longest-Palindromic-Subsequence.md)
