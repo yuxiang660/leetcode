@@ -97,6 +97,7 @@
 - [214. Shortest Palindrome](214.Shortest-Palindrome.md)
 
 ### Palindrome
+- [5. Longest Palindromic Substring](5.Longest-Palindromic-Substring.md)
 - [125. Valid Palindrome](125.Valid-Palindrome.md)
 - [131. Palindrome Partitioning](131.Palindrome-Partitioning.md)
 - [516. Longest Palindromic Subsequence](516.Longest-Palindromic-Subsequence.md)
