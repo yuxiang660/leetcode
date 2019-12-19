@@ -92,6 +92,8 @@
 ### Search by Hashing
 
 ## String Algorithm
+- [214. Shortest Palindrome](214.Shortest-Palindrome.md)
+
 ### KMP
 
 ### Palindrome
