@@ -95,6 +95,7 @@
 - [214. Shortest Palindrome](214.Shortest-Palindrome.md)
 
 ### KMP
+- [28.Implement-strStr()](28.Implement-strStr().md)
 
 ### Palindrome
 - [125. Valid Palindrome](125.Valid-Palindrome.md)
