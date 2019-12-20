@@ -52,22 +52,17 @@ void List::reverseIteratively()
    head = preNode;
 }
 
-static ListNode* exChangeList(ListNode* preNode, ListNode* node)
+static ListNode* moveForward(ListNode* baseNode, ListNode* movedNode)
 {
-   if (node == nullptr) return preNode;
+   if (movedNode == nullptr) return baseNode;
 
-   ListNode* next = node->next;
-   node->next = preNode;
+   ListNode* next = movedNode->next;
+   movedNode->next = baseNode;
 
-   return exChangeList(node, next);
+   return moveForward(movedNode, next);
 }
 
 void List::reverseRecursively()
 {
-   ListNode* preNode = nullptr;
-   ListNode* node = head;
-
-   head = exChangeList(preNode, node);
+   head = moveForward(nullptr, head);
 }
-
-
