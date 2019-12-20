@@ -8,6 +8,7 @@
 - [20.Valid Parentheses](20.Valid-Parentheses.md)
 
 ### Linked List
+- [206. Reverse Linked List](206.Reverse-Linked-List.md)
 
 ## Non-linear Structure
 ### Tree
