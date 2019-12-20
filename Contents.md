@@ -5,9 +5,11 @@
 ### Queue
 
 ### Stack
+- [92. Reverse Linked List II](92.Reverse-Linked-List-II.md)
 - [20.Valid Parentheses](20.Valid-Parentheses.md)
 
 ### Linked List
+- [92. Reverse Linked List II](92.Reverse-Linked-List-II.md)
 - [206. Reverse Linked List](206.Reverse-Linked-List.md)
 
 ## Non-linear Structure
