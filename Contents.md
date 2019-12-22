@@ -98,8 +98,10 @@
 ### Search by Hashing
 
 ## String Algorithm
+- [14. Longest Common Prefix](14.Longest-Common-Prefix.md)
+
 ### KMP
-- [28.Implement-strStr()](28.Implement-strStr().md)
+- [28. Implement-strStr()](28.Implement-strStr().md)
 - [214. Shortest Palindrome](214.Shortest-Palindrome.md)
 
 ### Palindrome
