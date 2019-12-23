@@ -40,6 +40,7 @@
 
 ### Trie Tree
 - [208. Implement Trie (Prefix Tree)](208.Implement-Trie-(Prefix-Tree).md)
+- [676. Implement Magic Dictionary](676.Implement-Magic-Dictionary.md)
 - [648. Replace Words](648.Replace-Words.md)
 
 ### Graph
