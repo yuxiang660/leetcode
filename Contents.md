@@ -68,6 +68,7 @@
 
 ### Backtracking
 - [131. Palindrome Partitioning](131.Palindrome-Partitioning.md)
+- [39. Combination Sum](39.Combination-Sum.md)
 
 ### Enumeration
 
