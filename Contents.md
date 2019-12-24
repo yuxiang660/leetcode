@@ -67,8 +67,9 @@
 - [639. Decode Ways II](639.Decode-Ways-II.md)
 
 ### Backtracking
-- [131. Palindrome Partitioning](131.Palindrome-Partitioning.md)
 - [39. Combination Sum](39.Combination-Sum.md)
+- [40. Combination Sum II](40.Combination-Sum-II.md)
+- [131. Palindrome Partitioning](131.Palindrome-Partitioning.md)
 
 ### Enumeration
 
