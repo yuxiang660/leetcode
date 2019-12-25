@@ -2,65 +2,52 @@
 #include <iostream>
 #include <vector>
 
-void findCombination
-(
-   const std::vector<int>& candidates,
-   int target,
-   std::vector<int>& oneCombination,
-   std::vector<std::vector<int>>& results
-)
+int helper(std::vector<int>& dp, const std::vector<int>& candidates, int left)
 {
-   if (target == 0) results.push_back(oneCombination);
-   if (target < 0) return;
+   if (left <= 0) return left == 0;
+   if (dp[left] != -1) return dp[left];
 
-   for (size_t i = 0; i < candidates.size(); i++)
-   {
-      oneCombination.push_back(candidates[i]);
-      findCombination
-      (
-         candidates,
-         target - candidates[i],
-         oneCombination,
-         results
-      );
-      oneCombination.pop_back();
+   dp[left] = 0;
+   for (int i = 0; i < candidates.size(); i++) {
+      dp[left] += helper(dp, candidates, left - candidates[i]);
    }
+   return dp[left];
 }
 
-std::vector<std::vector<int>> combinationSum(const std::vector<int>& data, int target)
+int combinationSum_DpFromTop(const std::vector<int>& candidates, int target)
 {
-   std::vector<int> candidates(data);
-   std::sort(candidates.begin(), candidates.end());
+   std::vector<int> dp(target + 1, -1);
+   return helper(dp, candidates, target);
+}
 
-   std::vector<std::vector<int>> results;
-   std::vector<int> oneCombination;
+// If target is very large, some values in DP array may out of "int" range.
+int combinationSum_DpFromBottom(const std::vector<int>& candidates, int target)
+{
+   // dp[i]: when the target is i, the number of possible combination is dp[i].
+   std::vector<int> dp(target + 1);
+   dp[0] = 0;
 
-   findCombination
-   (
-      candidates,
-      target,
-      oneCombination,
-      results
-   );
+   for (size_t i = 1; i < dp.size(); i++)
+   {
+      for (auto candidate : candidates)
+      {
+         if (i == candidate) dp[i] += 1;
+         if (i > candidate) dp[i] += dp[i - candidate];
+      }
+   }
 
-   return results;
+   return dp[target];
 }
 
 int main()
 {
    std::cout << "377. Combination Sum IV" << std::endl;
 
-   auto results = combinationSum({ 1, 2, 3 }, 4);
+   std::vector<int> candidates{ 3, 33, 333 };
+   int target = 333;
 
-   for (const auto& result : results)
-   {
-      std::cout << "[ ";
-      for (auto data : result)
-      {
-         std::cout << data << " ";
-      }
-      std::cout << "]" << std::endl;
-   }
+   std::cout << "The number of combination (DP From Bottom): " << combinationSum_DpFromBottom(candidates, target) << std::endl;
+   std::cout << "The number of combination (DP From Top): " << combinationSum_DpFromTop(candidates, target) << std::endl;
 
    return 0;
 }
