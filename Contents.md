@@ -51,6 +51,7 @@
 ### Gready Algorithms
 
 ### Divide-and-Conquer
+- [4. Median of Two Sorted Arrays](4.Median-of-Two-Sorted-Arrays.md)
 
 ### Dynamic Programming
 - [91. Decode Ways](91.Decode-Ways.md)
@@ -100,7 +101,8 @@
 #### Radix Sort
 
 ## Searching Algorithm
-### Search Trees
+### Binary Search
+- [4. Median of Two Sorted Arrays](4.Median-of-Two-Sorted-Arrays.md)
 
 ### Search by Hashing
 
