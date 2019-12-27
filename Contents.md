@@ -104,6 +104,8 @@
 ### Binary Search
 - [4. Median of Two Sorted Arrays](4.Median-of-Two-Sorted-Arrays.md)
 - [34. Find First and Last Position of Element in Sorted Array](34.Find-First-and-Last-Position-of-Element-in-Sorted-Array.md)
+- [110. Balanced Binary Tree](110.Balanced-Binary-Tree.md)
+- [108. Convert Sorted Array to Binary Search Tree](108.Convert-Sorted-Array-to-Binary-Search-Tree.md)
 
 ### Search by Hashing
 
