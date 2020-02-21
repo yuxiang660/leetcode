@@ -54,6 +54,7 @@
 - [4. Median of Two Sorted Arrays](4.Median-of-Two-Sorted-Arrays.md)
 
 ### Dynamic Programming
+- [10. Regular Expression Matching](10.Regular-Expression-Matching.md)
 - [91. Decode Ways](91.Decode-Ways.md)
 - [139. Word Break](139.Word-Break.md)
 - [140. Word Break II](140.Word-Break-II.md)
