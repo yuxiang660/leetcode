@@ -10,18 +10,36 @@ void print(const vector<int>& arr) {
    cout << endl;
 }
 
-// 平均时间复杂度：O(n^2)，最好时间复杂度：O(n^2)
+// 平均时间复杂度：O(n^2)，最好时间复杂度：O(n)
 vector<int> bubbleSort(const vector<int>& arr) {
    vector<int> ret = arr;
-
+   bool didSwap = false;
    for (int i = 0; i < ret.size(); i++) {
+      didSwap = false;
       for (int j = 1; j < ret.size() - i; j++) {
          if (ret[j - 1] > ret[j]) {
             int temp = ret[j - 1];
             ret[j - 1] = ret[j];
             ret[j] = temp;
+            didSwap = true;
          }
       }
+      if (didSwap == false) return ret;
+   }
+
+   return ret;
+}
+
+// 平均时间复杂度：O(n^2)，最好时间复杂度：O(n)
+vector<int> insertSort(const vector<int>& arr) {
+   auto ret = arr;
+
+   for (int i = 1; i < ret.size(); i++) {
+      int j, val = ret[i];
+      for (j = i - 1; j >= 0 && val < ret[j]; j--) {
+         ret[j + 1] = ret[j];
+      }
+      ret[j + 1] = val;
    }
 
    return ret;
@@ -142,6 +160,9 @@ int main() {
 
    cout << "Bubble sort: ";
    print(bubbleSort(arr));
+
+   cout << "Insert sort: ";
+   print(insertSort(arr));
 
    cout << "Select sort: ";
    print(selectSort(arr));
