@@ -101,7 +101,7 @@ void quickSortImpl(int arr[], int left, int right) {
    quickSortImpl(arr, pivot + 1, right);
 }
 
-// 平均时间复杂度：O(nlogn)，最好时间复杂度：O(nlogn)
+// 平均时间复杂度：O(nlogn)，最好时间复杂度：O(nlogn)，最坏时间复杂度：O(n)
 vector<int> quickSort(const vector<int>& arr) {
    vector<int> ret = arr;
 
@@ -150,6 +150,45 @@ vector<int> mergeSort(const vector<int>& arr) {
    return ret;
 }
 
+void heapAdjust(int arr[], int adjustIndex, int heapSize) {
+   int parent = adjustIndex;
+   int leftChild = 2 * adjustIndex + 1;
+   int rightChild = 2 * (adjustIndex + 1);
+
+   if (leftChild < heapSize && arr[parent] < arr[leftChild]) parent = leftChild;
+   if (rightChild < heapSize && arr[parent] < arr[rightChild]) parent = rightChild;
+
+   if (parent != adjustIndex) {
+      int temp = arr[parent];
+      arr[parent] = arr[adjustIndex];
+      arr[adjustIndex] = temp;
+      heapAdjust(arr, parent, heapSize);
+   }
+}
+
+void buildMaxHeap(int arr[], int heapSize) {
+   for (int i = heapSize / 2 - 1; i >= 0; i--) {
+      heapAdjust(arr, i, heapSize);
+   }
+}
+
+void heapSortImpl(int arr[], int heapSize) {
+   buildMaxHeap(arr, heapSize);
+   for (int i = heapSize - 1; i > 0; i--) {
+      int temp = arr[i];
+      arr[i] = arr[0];
+      arr[0] = temp;
+      heapAdjust(arr, 0, i);
+   }
+}
+
+// 平均时间复杂度：O(nlogn)，最好时间复杂度：O(nlogn)
+vector<int> heapSort(const vector<int>& arr) {
+   auto ret = arr;
+   heapSortImpl(ret.data(), ret.size());
+   return ret;
+}
+
 int main() {
    cout << "All Sort Algorithm" << endl;
 
@@ -172,6 +211,9 @@ int main() {
 
    cout << "Merge sort: ";
    print(mergeSort(arr));
+
+   cout << "Heap sort: ";
+   print(heapSort(arr));
 
    return 0;
 }
