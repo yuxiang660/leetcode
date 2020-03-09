@@ -48,7 +48,7 @@
 # Algorithm
 ## Algorithm Thoughts
 
-### Gready Algorithms
+### Greedy Algorithms
 
 ### Divide-and-Conquer
 - [4. Median of Two Sorted Arrays](4.Median-of-Two-Sorted-Arrays.md)
