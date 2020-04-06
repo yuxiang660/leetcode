@@ -45,6 +45,23 @@ vector<int> insertSort(const vector<int>& arr) {
    return ret;
 }
 
+// 平均时间复杂度：O(n^1.3)，最好时间复杂度：O(n)
+vector<int> shellSort(const vector<int>& arr) {
+   auto ret = arr;
+
+   for (int gap = ret.size() / 2; gap > 0; gap /= 2) {
+      // insert sort
+      for (int i = gap; i < ret.size(); i++) {
+         int j, val = ret[i];
+         for (j = i - gap; j >= 0 && val < ret[j]; j -= gap) {
+            ret[j + gap] = ret[j];
+         }
+         ret[j + gap] = val;
+      }
+   }
+   return ret;
+}
+
 // 平均时间复杂度：O(n^2)，最好时间复杂度：O(n^2)
 vector<int> selectSort(const vector<int>& arr) {
    vector<int> ret = arr;
@@ -202,6 +219,9 @@ int main() {
 
    cout << "Insert sort: ";
    print(insertSort(arr));
+
+   cout << "Shell sort: ";
+   print(shellSort(arr));
 
    cout << "Select sort: ";
    print(selectSort(arr));
