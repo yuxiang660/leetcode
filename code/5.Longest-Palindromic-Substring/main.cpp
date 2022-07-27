@@ -29,6 +29,7 @@ std::string longestPalindrome(const std::string& s)
 
    for (size_t i = 1; i < s.size(); i++)
    {
+      // 找到以s[i+1]结尾的回文子串
       auto palindrome = getPalindrome(std::string(s.begin(), s.begin() + i + 1));
       if (palindrome.size() > longestPalindrome.size())
       {
@@ -76,7 +77,7 @@ int main()
 {
    std::cout << "5. Longest Palindromic Substring" << std::endl;
 
-   std::string s("cbbd");
+   std::string s("abracadabra");
 
    std::cout << "Longest Palindromic Substring: " << longestPalindrome(s) << std::endl;
    std::cout << "Longest Palindromic Substring (DP): " << longestPalindrome_DP(s) << std::endl;

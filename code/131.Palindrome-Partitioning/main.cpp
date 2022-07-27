@@ -15,6 +15,7 @@ bool isPalindrome(const std::string& s)
    return true;
 }
 
+// key: sub-string, value: partitions of the sub-string
 std::unordered_map<std::string, std::vector<std::vector<std::string>>> partitionMap;
 
 std::vector<std::vector<std::string>> partition(const std::string& s)
@@ -82,7 +83,7 @@ int main()
 {
    std::cout << "131. Palindrome Partitioning" << std::endl;
 
-   std::string s("efe");
+   std::string s("aabbb");
 
    std::cout << "Recusion Solution:" << std::endl;
    for (const auto& palindormes : partition(s))
